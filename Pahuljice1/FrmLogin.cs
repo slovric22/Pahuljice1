@@ -33,10 +33,10 @@ namespace Pahuljice1
             else {
                 if (txtUsername.Text == username && txtPassword.Text == password)
                 {
-                    MessageBox.Show("Dobrodošli!", "Prijavljeni ste", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else {
-                    MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   FrmKids frmKids = new FrmKids();
+                    Hide();
+                    frmKids.ShowDialog();
+                    Close();
                 }
             }
         }
