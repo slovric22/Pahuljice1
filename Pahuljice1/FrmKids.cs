@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pahuljice1.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace Pahuljice1
         public FrmKids()
         {
             InitializeComponent();
+        }
+
+        private void FrmKids_Load(object sender, EventArgs e)
+        {
+            List<Kid> kids = KidRepository.GetKids();
+            DGVKids.DataSource = kids;
+
+            DGVKids.Columns["Id"].DisplayIndex = 0;
+            DGVKids.Columns["FirstName"].DisplayIndex = 1;
+            DGVKids.Columns["LastName"].DisplayIndex = 2;
+            DGVKids.Columns["OIB"].DisplayIndex = 3;
         }
     }
 }
