@@ -39,6 +39,7 @@
             this.DGVKids.Name = "DGVKids";
             this.DGVKids.Size = new System.Drawing.Size(740, 401);
             this.DGVKids.TabIndex = 0;
+            this.DGVKids.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVKids_CellContentClick);
             // 
             // FrmKids
             // 

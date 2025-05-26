@@ -28,5 +28,10 @@ namespace Pahuljice1
             DGVKids.Columns["LastName"].DisplayIndex = 2;
             DGVKids.Columns["OIB"].DisplayIndex = 3;
         }
+
+        private void DGVKids_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -42,15 +42,15 @@ namespace Pahuljice1.Repositories
         private static Kid CreateObject(SqlDataReader reader)
         {
             int id = int.Parse(reader["Id"].ToString());
-            string firstName= reader["FirstName"].ToString();
-            string lastName = reader["LastName"].ToString();
+            string firstName= reader["Ime i prezime"].ToString();
+            string date = reader["Datum rođenja"].ToString();
             int.TryParse(reader["OIB"].ToString(), out int OIB);
 
             Kid kid = new Kid()
             {
                 Id = id,
-                FirstName = firstName,
-                LastName = lastName,
+                FirstName  = firstName,
+                Datum rođenja = date,
                 OIB = OIB
             };
             return kid;
