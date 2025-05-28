@@ -17,16 +17,25 @@ namespace Pahuljice1
         {
             InitializeComponent();
         }
-
         private void FrmKids_Load(object sender, EventArgs e)
+        {
+            ShowKids();
+        }
+
+        private void ShowKids()
         {
             List<Kid> kids = KidRepository.GetKids();
             DGVKids.DataSource = kids;
 
-            DGVKids.Columns["Id"].DisplayIndex = 0;
-            DGVKids.Columns["FirstName"].DisplayIndex = 1;
-            DGVKids.Columns["LastName"].DisplayIndex = 2;
-            DGVKids.Columns["OIB"].DisplayIndex = 3;
+            DGVKids.Columns["OIB"].DisplayIndex = 0;
+            DGVKids.Columns["Name"].DisplayIndex = 1;
+            DGVKids.Columns["Date"].DisplayIndex = 2;
+            DGVKids.Columns["Parent"].DisplayIndex = 3;
+            DGVKids.Columns["Contact"].DisplayIndex = 4;
+            DGVKids.Columns["Allergy"].DisplayIndex = 5;
+            DGVKids.Columns["Setback"].DisplayIndex = 6;
+            DGVKids.Columns["Group"].DisplayIndex = 7;
+            DGVKids.Columns["Employee"].DisplayIndex = 8;
         }
 
         private void DGVKids_CellContentClick(object sender, DataGridViewCellEventArgs e)

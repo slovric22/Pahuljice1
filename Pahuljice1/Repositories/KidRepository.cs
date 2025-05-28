@@ -4,7 +4,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DBLayer;
 
 namespace Pahuljice1.Repositories
 {
@@ -12,7 +11,7 @@ namespace Pahuljice1.Repositories
     {
         public static Kid GetKids(int id) {
             Kid kid = null;
-            string sql = $"SELECT * FROM  Kids WHERE Id ={ id}";
+            string sql = $"SELECT * FROM  dbo.Kids WHERE Id ={ id}";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if (reader.HasRows)
@@ -27,13 +26,14 @@ namespace Pahuljice1.Repositories
 
         public static List<Kid> GetKids()
         { 
-        List<Kid> kids = new List<Kid>();
-            string sql = "SELECT * FROM Kids";
+        var kids = new List<Kid>();
+            string sql = "SELECT * FROM dbo.Kids";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read()) {
                 Kid kid = CreateObject(reader);
                 kids.Add(kid);
+              
             }
             reader.Close();
             DB.CloseConnection();
@@ -41,20 +41,33 @@ namespace Pahuljice1.Repositories
         }
         private static Kid CreateObject(SqlDataReader reader)
         {
-            int id = int.Parse(reader["Id"].ToString());
-            string firstName= reader["Ime i prezime"].ToString();
+            int oib = int.Parse(reader["Id"].ToString());
+            string name = reader["Ime i prezime"].ToString();
             string date = reader["Datum rođenja"].ToString();
-            int.TryParse(reader["OIB"].ToString(), out int OIB);
+            string parent = reader["Roditelj(i)"].ToString();
+            string contact = reader["Kontakt"].ToString();
+            string allergy = reader["Alergije"].ToString();
+            string setback = reader["Poteškoće"].ToString();
+            string group = reader["Skupina"].ToString();
+            string employee = reader["Zaposlenik"].ToString();
 
-            Kid kid = new Kid()
+            var kid = new Kid
             {
-                Id = id,
-                FirstName  = firstName,
-                Datum rođenja = date,
-                OIB = OIB
+                OIB = oib,
+                Name = name,
+                Date = date,
+                Parent = parent,
+                Contact = contact,
+                Allergy = allergy,
+                Setback = setback,
+                Group = group,
+                Employee = employee
             };
+
             return kid;
         }
 
     }
+
 }
+
