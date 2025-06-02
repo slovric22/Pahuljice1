@@ -57,7 +57,6 @@ namespace Pahuljice1
             };
 
             KidRepository.AddKid(kid);
-
             MessageBox.Show("Dijete je uspješno dodano!");
             this.DialogResult = DialogResult.OK;
             this.Close();
