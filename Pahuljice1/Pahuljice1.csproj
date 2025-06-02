@@ -71,7 +71,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\KidRepository.cs" />
-    <Compile Include="Teacher.cs" />
     <EmbeddedResource Include="FrmAddKid.resx">
       <DependentUpon>FrmAddKid.cs</DependentUpon>
     </EmbeddedResource>
