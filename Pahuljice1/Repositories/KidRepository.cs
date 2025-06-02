@@ -41,7 +41,8 @@ namespace Pahuljice1.Repositories
         }
         private static Kid CreateObject(SqlDataReader reader)
         {
-            
+            int id = reader["Id"] == DBNull.Value ? 0 : Convert.ToInt32(reader["Id"]);
+
             string name = reader["Ime i prezime"].ToString();
             string date = reader["Datum rođenja"].ToString();
             string parent = reader["Roditelj(i)"].ToString();
@@ -53,7 +54,8 @@ namespace Pahuljice1.Repositories
 
             var kid = new Kid
             {
-                
+
+                Id = id,
                 Name = name,
                 Date = date,
                 Parent = parent,
@@ -66,22 +68,32 @@ namespace Pahuljice1.Repositories
 
             return kid;
         }
-        
 
-        public static void DeleteKid(Kid kid)
+
+        public static void DeleteKidById(int id)
         {
-            string sql = $"DELETE FROM Kids WHERE Id = {kid.OIB}";
+            string sql = "DELETE FROM Kids WHERE Id = @Id";
             DB.OpenConnection();
-            DB.ExecuteCommand(sql);
+            SqlCommand cmd = new SqlCommand(sql, DB.GetConnection());
+            cmd.Parameters.AddWithValue("@Id", id);
+            int rowsAffected = cmd.ExecuteNonQuery();
             DB.CloseConnection();
+
+            if (rowsAffected == 0)
+                throw new Exception("Nije pronađeno dijete s tim Id-em za brisanje.");
         }
+
+
+
+
         public static void AddKid(Kid kid)
         {
-            string sql = @"INSERT INTO Kids ([Ime i prezime], [Datum rođenja], [Roditelj(i)], [Kontakt], [Alergije], [Poteškoće], [Skupina], [Zaposlenik])
-                   VALUES (@Name, @Date, @Parent, @Contact, @Allergy, @Setback, @Group, @Employee)";
+            string sql = @"INSERT INTO Kids (Id, [Ime i prezime], [Datum rođenja], [Roditelj(i)], [Kontakt], [Alergije], [Poteškoće], [Skupina], [Zaposlenik])
+                   VALUES (@Id, @Name, @Date, @Parent, @Contact, @Allergy, @Setback, @Group, @Employee)";
 
             DB.OpenConnection();
             SqlCommand cmd = new SqlCommand(sql, DB.GetConnection());
+            cmd.Parameters.AddWithValue("@Id", kid.Id);
             cmd.Parameters.AddWithValue("@Name", kid.Name);
             cmd.Parameters.AddWithValue("@Date", kid.Date);
             cmd.Parameters.AddWithValue("@Parent", kid.Parent);
@@ -93,6 +105,34 @@ namespace Pahuljice1.Repositories
             cmd.ExecuteNonQuery();
             DB.CloseConnection();
         }
+        public static void UpdateKid(Kid kid)
+        {
+            string sql = @"UPDATE Kids SET 
+                    [Ime i prezime] = @Name, 
+                    [Datum rođenja] = @Date,
+                    [Roditelj(i)] = @Parent,
+                    [Kontakt] = @Contact,
+                    [Alergije] = @Allergy,
+                    [Poteškoće] = @Setback,
+                    [Skupina] = @Group,
+                    [Zaposlenik] = @Employee
+                   WHERE Id = @Id";
+
+            DB.OpenConnection();
+            SqlCommand cmd = new SqlCommand(sql, DB.GetConnection());
+            cmd.Parameters.AddWithValue("@Id", kid.Id);
+            cmd.Parameters.AddWithValue("@Name", kid.Name);
+            cmd.Parameters.AddWithValue("@Date", kid.Date);
+            cmd.Parameters.AddWithValue("@Parent", kid.Parent);
+            cmd.Parameters.AddWithValue("@Contact", kid.Contact);
+            cmd.Parameters.AddWithValue("@Allergy", kid.Allergy);
+            cmd.Parameters.AddWithValue("@Setback", kid.Setback);
+            cmd.Parameters.AddWithValue("@Group", kid.Group);
+            cmd.Parameters.AddWithValue("@Employee", kid.Employee);
+            cmd.ExecuteNonQuery();
+            DB.CloseConnection();
+        }
+
 
 
     }

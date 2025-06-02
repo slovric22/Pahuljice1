@@ -30,7 +30,13 @@ namespace Pahuljice1
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-           
+            if (!int.TryParse(txtId.Text, out int parsedId))
+            {
+                MessageBox.Show("Unesite ispravan broj za ID.");
+                return;
+            }
+
+
             if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtDate.Text))
             {
                 MessageBox.Show("Molimo unesite barem ime i datum rođenja.");
@@ -39,7 +45,7 @@ namespace Pahuljice1
 
             Kid kid = new Kid
             {
-                
+                Id = parsedId,
                 Name = txtName.Text,
                 Date = txtDate.Text,
                 Parent = txtParent.Text,

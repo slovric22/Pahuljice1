@@ -8,7 +8,7 @@ namespace Pahuljice1
 {
     public class Kid : Person
     {
-        public int OIB { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Date { get; set; }
         public string Parent {  get; set; }

@@ -31,6 +31,7 @@
             this.DGVKids = new System.Windows.Forms.DataGridView();
             this.BtnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSaveChanges = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVKids)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             // 
             // BtnAdd
             // 
-            this.BtnAdd.Location = new System.Drawing.Point(666, 387);
+            this.BtnAdd.Location = new System.Drawing.Point(122, 387);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(93, 47);
             this.BtnAdd.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(430, 387);
+            this.btnDelete.Location = new System.Drawing.Point(12, 387);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(93, 47);
             this.btnDelete.TabIndex = 2;
@@ -63,11 +64,21 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // btnSaveChanges
+            // 
+            this.btnSaveChanges.Location = new System.Drawing.Point(683, 388);
+            this.btnSaveChanges.Name = "btnSaveChanges";
+            this.btnSaveChanges.Size = new System.Drawing.Size(105, 46);
+            this.btnSaveChanges.TabIndex = 3;
+            this.btnSaveChanges.Text = "Spremi promjene";
+            this.btnSaveChanges.UseVisualStyleBackColor = true;
+            // 
             // FrmKids
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.DGVKids);
@@ -84,5 +95,6 @@
         private System.Windows.Forms.DataGridView DGVKids;
         private System.Windows.Forms.Button BtnAdd;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnSaveChanges;
     }
 }
