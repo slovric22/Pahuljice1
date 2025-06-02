@@ -12,7 +12,7 @@ namespace Pahuljice1
 {
     public partial class FrmLogin : Form
     {
-        string username = "nastavnik";
+        string username = "ravnateljica";
         string password = "test";
 
         public FrmLogin()
@@ -47,6 +47,11 @@ namespace Pahuljice1
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
         {
 
         }
