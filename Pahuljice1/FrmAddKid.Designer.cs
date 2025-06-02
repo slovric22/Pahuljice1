@@ -51,7 +51,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(87, 54);
+            this.txtName.Location = new System.Drawing.Point(134, 81);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(272, 20);
             this.txtName.TabIndex = 0;
@@ -59,7 +59,8 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(12, 54);
+            this.lblName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblName.Location = new System.Drawing.Point(59, 81);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(71, 13);
             this.lblName.TabIndex = 1;
@@ -68,7 +69,7 @@
             // 
             // txtDate
             // 
-            this.txtDate.Location = new System.Drawing.Point(89, 92);
+            this.txtDate.Location = new System.Drawing.Point(136, 119);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(271, 20);
             this.txtDate.TabIndex = 2;
@@ -76,7 +77,8 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(12, 92);
+            this.lblDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDate.Location = new System.Drawing.Point(59, 119);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(80, 13);
             this.lblDate.TabIndex = 3;
@@ -84,7 +86,7 @@
             // 
             // txtParent
             // 
-            this.txtParent.Location = new System.Drawing.Point(88, 131);
+            this.txtParent.Location = new System.Drawing.Point(135, 158);
             this.txtParent.Name = "txtParent";
             this.txtParent.Size = new System.Drawing.Size(271, 20);
             this.txtParent.TabIndex = 4;
@@ -92,7 +94,8 @@
             // lblParent
             // 
             this.lblParent.AutoSize = true;
-            this.lblParent.Location = new System.Drawing.Point(12, 134);
+            this.lblParent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblParent.Location = new System.Drawing.Point(59, 161);
             this.lblParent.Name = "lblParent";
             this.lblParent.Size = new System.Drawing.Size(47, 13);
             this.lblParent.TabIndex = 5;
@@ -100,7 +103,7 @@
             // 
             // txtContact
             // 
-            this.txtContact.Location = new System.Drawing.Point(89, 175);
+            this.txtContact.Location = new System.Drawing.Point(136, 202);
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(270, 20);
             this.txtContact.TabIndex = 6;
@@ -108,7 +111,8 @@
             // lblContact
             // 
             this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(12, 178);
+            this.lblContact.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblContact.Location = new System.Drawing.Point(59, 205);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(47, 13);
             this.lblContact.TabIndex = 7;
@@ -116,7 +120,7 @@
             // 
             // txtAllergy
             // 
-            this.txtAllergy.Location = new System.Drawing.Point(87, 225);
+            this.txtAllergy.Location = new System.Drawing.Point(134, 252);
             this.txtAllergy.Name = "txtAllergy";
             this.txtAllergy.Size = new System.Drawing.Size(272, 20);
             this.txtAllergy.TabIndex = 8;
@@ -124,7 +128,8 @@
             // lblAllergy
             // 
             this.lblAllergy.AutoSize = true;
-            this.lblAllergy.Location = new System.Drawing.Point(12, 228);
+            this.lblAllergy.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAllergy.Location = new System.Drawing.Point(59, 255);
             this.lblAllergy.Name = "lblAllergy";
             this.lblAllergy.Size = new System.Drawing.Size(44, 13);
             this.lblAllergy.TabIndex = 9;
@@ -132,7 +137,7 @@
             // 
             // txtSetback
             // 
-            this.txtSetback.Location = new System.Drawing.Point(87, 275);
+            this.txtSetback.Location = new System.Drawing.Point(134, 302);
             this.txtSetback.Name = "txtSetback";
             this.txtSetback.Size = new System.Drawing.Size(273, 20);
             this.txtSetback.TabIndex = 10;
@@ -140,7 +145,8 @@
             // lblSetback
             // 
             this.lblSetback.AutoSize = true;
-            this.lblSetback.Location = new System.Drawing.Point(12, 278);
+            this.lblSetback.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSetback.Location = new System.Drawing.Point(59, 305);
             this.lblSetback.Name = "lblSetback";
             this.lblSetback.Size = new System.Drawing.Size(61, 13);
             this.lblSetback.TabIndex = 11;
@@ -148,7 +154,7 @@
             // 
             // txtGroup
             // 
-            this.txtGroup.Location = new System.Drawing.Point(87, 326);
+            this.txtGroup.Location = new System.Drawing.Point(134, 353);
             this.txtGroup.Name = "txtGroup";
             this.txtGroup.Size = new System.Drawing.Size(272, 20);
             this.txtGroup.TabIndex = 12;
@@ -156,7 +162,8 @@
             // lblGroup
             // 
             this.lblGroup.AutoSize = true;
-            this.lblGroup.Location = new System.Drawing.Point(12, 327);
+            this.lblGroup.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblGroup.Location = new System.Drawing.Point(59, 354);
             this.lblGroup.Name = "lblGroup";
             this.lblGroup.Size = new System.Drawing.Size(49, 13);
             this.lblGroup.TabIndex = 13;
@@ -164,7 +171,7 @@
             // 
             // txtEmployee
             // 
-            this.txtEmployee.Location = new System.Drawing.Point(87, 376);
+            this.txtEmployee.Location = new System.Drawing.Point(134, 403);
             this.txtEmployee.Name = "txtEmployee";
             this.txtEmployee.Size = new System.Drawing.Size(271, 20);
             this.txtEmployee.TabIndex = 14;
@@ -172,7 +179,8 @@
             // lblEmployee
             // 
             this.lblEmployee.AutoSize = true;
-            this.lblEmployee.Location = new System.Drawing.Point(11, 380);
+            this.lblEmployee.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblEmployee.Location = new System.Drawing.Point(58, 407);
             this.lblEmployee.Name = "lblEmployee";
             this.lblEmployee.Size = new System.Drawing.Size(62, 13);
             this.lblEmployee.TabIndex = 15;
@@ -180,17 +188,18 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(120, 444);
+            this.btnSave.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnSave.Location = new System.Drawing.Point(162, 429);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(148, 50);
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Dodaj";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(87, 20);
+            this.txtId.Location = new System.Drawing.Point(134, 47);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(270, 20);
             this.txtId.TabIndex = 17;
@@ -198,7 +207,8 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(13, 20);
+            this.lblId.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblId.Location = new System.Drawing.Point(60, 47);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(21, 13);
             this.lblId.TabIndex = 18;
@@ -208,7 +218,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 506);
+            this.BackgroundImage = global::Pahuljice1.Properties.Resources.Pi4;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(467, 506);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnSave);

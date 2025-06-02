@@ -107,6 +107,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="DBlayer\DBLayer.dll" />
+    <None Include="Resources\Pi4.jpeg" />
     <None Include="Resources\Pislika3.jpeg" />
     <None Include="Resources\Pislika2.jpeg" />
     <None Include="Resources\SlikaPi1.jpeg" />
