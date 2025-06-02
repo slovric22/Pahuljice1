@@ -29,23 +29,35 @@
         private void InitializeComponent()
         {
             this.DGVKids = new System.Windows.Forms.DataGridView();
+            this.BtnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVKids)).BeginInit();
             this.SuspendLayout();
             // 
             // DGVKids
             // 
             this.DGVKids.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVKids.Location = new System.Drawing.Point(20, 26);
+            this.DGVKids.Location = new System.Drawing.Point(12, 12);
             this.DGVKids.Name = "DGVKids";
-            this.DGVKids.Size = new System.Drawing.Size(740, 401);
+            this.DGVKids.Size = new System.Drawing.Size(776, 346);
             this.DGVKids.TabIndex = 0;
             this.DGVKids.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVKids_CellContentClick);
+            // 
+            // BtnAdd
+            // 
+            this.BtnAdd.Location = new System.Drawing.Point(666, 387);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(93, 47);
+            this.BtnAdd.TabIndex = 1;
+            this.BtnAdd.Text = "Dodaj";
+            this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmKids
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.DGVKids);
             this.Name = "FrmKids";
             this.Text = "FrmKids";
@@ -58,5 +70,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DGVKids;
+        private System.Windows.Forms.Button BtnAdd;
     }
 }

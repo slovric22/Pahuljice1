@@ -9,7 +9,7 @@ namespace Pahuljice1.Repositories
 {
     public class KidRepository
     {
-        public static Kid GetKids(int id) {
+        public static Kid GetKid(int id) {
             Kid kid = null;
             string sql = $"SELECT * FROM  dbo.Kids WHERE Id ={ id}";
             DB.OpenConnection();
@@ -41,7 +41,7 @@ namespace Pahuljice1.Repositories
         }
         private static Kid CreateObject(SqlDataReader reader)
         {
-            int oib = int.Parse(reader["Id"].ToString());
+            string oib = reader["Id"].ToString();
             string name = reader["Ime i prezime"].ToString();
             string date = reader["Datum rođenja"].ToString();
             string parent = reader["Roditelj(i)"].ToString();
@@ -66,6 +66,34 @@ namespace Pahuljice1.Repositories
 
             return kid;
         }
+        
+
+        public static void DeleteKid(Kid kid)
+        {
+            string sql = $"DELETE FROM Kids WHERE Id = {kid.OIB}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+        public static void AddKid(Kid kid)
+        {
+            string sql = @"INSERT INTO Kids ([Ime i prezime], [Datum rođenja], [Roditelj(i)], [Kontakt], [Alergije], [Poteškoće], [Skupina], [Zaposlenik])
+                   VALUES (@Name, @Date, @Parent, @Contact, @Allergy, @Setback, @Group, @Employee)";
+
+            DB.OpenConnection();
+            SqlCommand cmd = new SqlCommand(sql, DB.GetConnection());
+            cmd.Parameters.AddWithValue("@Name", kid.Name);
+            cmd.Parameters.AddWithValue("@Date", kid.Date);
+            cmd.Parameters.AddWithValue("@Parent", kid.Parent);
+            cmd.Parameters.AddWithValue("@Contact", kid.Contact);
+            cmd.Parameters.AddWithValue("@Allergy", kid.Allergy);
+            cmd.Parameters.AddWithValue("@Setback", kid.Setback);
+            cmd.Parameters.AddWithValue("@Group", kid.Group);
+            cmd.Parameters.AddWithValue("@Employee", kid.Employee);
+            cmd.ExecuteNonQuery();
+            DB.CloseConnection();
+        }
+
 
     }
 

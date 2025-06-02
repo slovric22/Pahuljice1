@@ -36,11 +36,25 @@ namespace Pahuljice1
             DGVKids.Columns["Setback"].DisplayIndex = 6;
             DGVKids.Columns["Group"].DisplayIndex = 7;
             DGVKids.Columns["Employee"].DisplayIndex = 8;
+            DGVKids.Columns["FirstName"].Visible = false;
+            DGVKids.Columns["LastName"].Visible = false;
+            DGVKids.Columns["FirstName"].Visible = false;
+            DGVKids.Columns["Id"].Visible = false;
+
         }
 
         private void DGVKids_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmAddKid form = new FrmAddKid();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                ShowKids(); 
+            }
         }
     }
 }
