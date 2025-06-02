@@ -94,7 +94,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.BackgroundImage = global::Pahuljice1.Properties.Resources.SlikaPi;
+            this.BackgroundImage = global::Pahuljice1.Properties.Resources.Pislika2;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnEmployees);
             this.Controls.Add(this.btnSaveChanges);
