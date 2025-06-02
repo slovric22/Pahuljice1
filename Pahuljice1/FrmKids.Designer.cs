@@ -72,6 +72,7 @@
             this.btnSaveChanges.TabIndex = 3;
             this.btnSaveChanges.Text = "Spremi promjene";
             this.btnSaveChanges.UseVisualStyleBackColor = true;
+            this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
             // 
             // FrmKids
             // 

@@ -96,8 +96,35 @@ namespace Pahuljice1
             }
         }
 
-    }
+        private void btnSaveChanges_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in DGVKids.Rows)
+            {
+                if (row.IsNewRow) continue;
 
+                Kid kid = new Kid
+                {
+                    Id = Convert.ToInt32(row.Cells["Id"].Value),
+                    Name = row.Cells["Name"].Value?.ToString(),
+                    Date = row.Cells["Date"].Value?.ToString(),
+                    Parent = row.Cells["Parent"].Value?.ToString(),
+                    Contact = row.Cells["Contact"].Value?.ToString(),
+                    Allergy = row.Cells["Allergy"].Value?.ToString(),
+                    Setback = row.Cells["Setback"].Value?.ToString(),
+                    Group = row.Cells["Group"].Value?.ToString(),
+                    Employee = row.Cells["Employee"].Value?.ToString()
+                };
+
+                KidRepository.UpdateKid(kid);
+            }
+
+            MessageBox.Show("Sve promjene su spremljene.");
+            ShowKids(); 
+        }
+
+    }
 }
+
+
 
 
