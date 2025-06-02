@@ -31,7 +31,7 @@ namespace Pahuljice1
         private void btnSave_Click(object sender, EventArgs e)
         {
            
-            if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtDate.Text) || string.IsNullOrWhiteSpace(txtOib.Text))
+            if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtDate.Text))
             {
                 MessageBox.Show("Molimo unesite barem ime i datum rođenja.");
                 return;
@@ -39,7 +39,7 @@ namespace Pahuljice1
 
             Kid kid = new Kid
             {
-                OIB = txtOib.Text,
+                
                 Name = txtName.Text,
                 Date = txtDate.Text,
                 Parent = txtParent.Text,

@@ -45,8 +45,6 @@
             this.txtEmployee = new System.Windows.Forms.TextBox();
             this.lblEmployee = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtOib = new System.Windows.Forms.TextBox();
-            this.lblOib = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtName
@@ -188,29 +186,11 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtOib
-            // 
-            this.txtOib.Location = new System.Drawing.Point(90, 21);
-            this.txtOib.Name = "txtOib";
-            this.txtOib.Size = new System.Drawing.Size(269, 20);
-            this.txtOib.TabIndex = 17;
-            // 
-            // lblOib
-            // 
-            this.lblOib.AutoSize = true;
-            this.lblOib.Location = new System.Drawing.Point(18, 22);
-            this.lblOib.Name = "lblOib";
-            this.lblOib.Size = new System.Drawing.Size(28, 13);
-            this.lblOib.TabIndex = 18;
-            this.lblOib.Text = "OIB:";
-            // 
             // FrmAddKid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 506);
-            this.Controls.Add(this.lblOib);
-            this.Controls.Add(this.txtOib);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblEmployee);
             this.Controls.Add(this.txtEmployee);
@@ -255,7 +235,5 @@
         private System.Windows.Forms.TextBox txtEmployee;
         private System.Windows.Forms.Label lblEmployee;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtOib;
-        private System.Windows.Forms.Label lblOib;
     }
 }

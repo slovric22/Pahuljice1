@@ -30,6 +30,7 @@
         {
             this.DGVKids = new System.Windows.Forms.DataGridView();
             this.BtnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVKids)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,11 +53,22 @@
             this.BtnAdd.UseVisualStyleBackColor = true;
             this.BtnAdd.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(430, 387);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(93, 47);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Ukloni";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // FrmKids
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.DGVKids);
             this.Name = "FrmKids";
@@ -71,5 +83,6 @@
 
         private System.Windows.Forms.DataGridView DGVKids;
         private System.Windows.Forms.Button BtnAdd;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

@@ -27,15 +27,15 @@ namespace Pahuljice1
             List<Kid> kids = KidRepository.GetKids();
             DGVKids.DataSource = kids;
 
-            DGVKids.Columns["OIB"].DisplayIndex = 0;
-            DGVKids.Columns["Name"].DisplayIndex = 1;
-            DGVKids.Columns["Date"].DisplayIndex = 2;
-            DGVKids.Columns["Parent"].DisplayIndex = 3;
-            DGVKids.Columns["Contact"].DisplayIndex = 4;
-            DGVKids.Columns["Allergy"].DisplayIndex = 5;
-            DGVKids.Columns["Setback"].DisplayIndex = 6;
-            DGVKids.Columns["Group"].DisplayIndex = 7;
-            DGVKids.Columns["Employee"].DisplayIndex = 8;
+           
+            DGVKids.Columns["Name"].DisplayIndex = 0;
+            DGVKids.Columns["Date"].DisplayIndex = 1;
+            DGVKids.Columns["Parent"].DisplayIndex = 2;
+            DGVKids.Columns["Contact"].DisplayIndex = 3;
+            DGVKids.Columns["Allergy"].DisplayIndex = 4;
+            DGVKids.Columns["Setback"].DisplayIndex = 5;
+            DGVKids.Columns["Group"].DisplayIndex = 6;
+            DGVKids.Columns["Employee"].DisplayIndex = 7;
             DGVKids.Columns["FirstName"].Visible = false;
             DGVKids.Columns["LastName"].Visible = false;
             DGVKids.Columns["FirstName"].Visible = false;
@@ -55,6 +55,11 @@ namespace Pahuljice1
             {
                 ShowKids(); 
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

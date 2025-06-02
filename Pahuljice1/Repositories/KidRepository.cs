@@ -41,7 +41,7 @@ namespace Pahuljice1.Repositories
         }
         private static Kid CreateObject(SqlDataReader reader)
         {
-            string oib = reader["Id"].ToString();
+            
             string name = reader["Ime i prezime"].ToString();
             string date = reader["Datum rođenja"].ToString();
             string parent = reader["Roditelj(i)"].ToString();
@@ -53,7 +53,7 @@ namespace Pahuljice1.Repositories
 
             var kid = new Kid
             {
-                OIB = oib,
+                
                 Name = name,
                 Date = date,
                 Parent = parent,
