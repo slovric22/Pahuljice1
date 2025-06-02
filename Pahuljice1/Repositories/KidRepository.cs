@@ -132,6 +132,32 @@ namespace Pahuljice1.Repositories
             cmd.ExecuteNonQuery();
             DB.CloseConnection();
         }
+        public static Dictionary<string, List<Kid>> GetKidsGroupedByEmployee()
+        {
+            var result = new Dictionary<string, List<Kid>>();
+            string sql = "SELECT * FROM dbo.Kids ORDER BY [Zaposlenik], [Ime i prezime]";
+
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+
+            while (reader.Read())
+            {
+                var kid = CreateObject(reader);
+                string employee = kid.Employee ?? "Nepoznato";
+
+                if (!result.ContainsKey(employee))
+                {
+                    result[employee] = new List<Kid>();
+                }
+
+                result[employee].Add(kid);
+            }
+
+            reader.Close();
+            DB.CloseConnection();
+
+            return result;
+        }
 
 
 

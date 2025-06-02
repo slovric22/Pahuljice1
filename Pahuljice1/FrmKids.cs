@@ -122,6 +122,29 @@ namespace Pahuljice1
             ShowKids(); 
         }
 
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            ShowEmployeesAndKids();
+        }
+        private void ShowEmployeesAndKids()
+        {
+            var grouped = KidRepository.GetKidsGroupedByEmployee();
+            string output = "";
+
+            foreach (var employee in grouped.Keys)
+            {
+                output += "Zaposlenik: " + employee + Environment.NewLine;
+
+                foreach (var kid in grouped[employee])
+                {
+                    output += " - Dijete: " + kid.Name + ", datum rođenja: " + kid.Date + Environment.NewLine;
+                }
+
+                output += Environment.NewLine;
+            }
+
+            MessageBox.Show(output, "Popis zaposlenika i djece");
+        }
     }
 }
 

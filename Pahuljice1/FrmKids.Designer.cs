@@ -32,6 +32,7 @@
             this.BtnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSaveChanges = new System.Windows.Forms.Button();
+            this.btnEmployees = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVKids)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,11 +75,22 @@
             this.btnSaveChanges.UseVisualStyleBackColor = true;
             this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
             // 
+            // btnEmployees
+            // 
+            this.btnEmployees.Location = new System.Drawing.Point(249, 396);
+            this.btnEmployees.Name = "btnEmployees";
+            this.btnEmployees.Size = new System.Drawing.Size(105, 37);
+            this.btnEmployees.TabIndex = 4;
+            this.btnEmployees.Text = "Ispis zaposlenih";
+            this.btnEmployees.UseVisualStyleBackColor = true;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
+            // 
             // FrmKids
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEmployees);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.BtnAdd);
@@ -97,5 +109,6 @@
         private System.Windows.Forms.Button BtnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSaveChanges;
+        private System.Windows.Forms.Button btnEmployees;
     }
 }
