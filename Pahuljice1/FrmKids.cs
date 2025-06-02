@@ -145,6 +145,11 @@ namespace Pahuljice1
 
             MessageBox.Show(output, "Popis zaposlenika i djece");
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
