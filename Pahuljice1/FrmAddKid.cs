@@ -20,7 +20,7 @@ namespace Pahuljice1
 
         private void FrmAddKid_Load(object sender, EventArgs e)
         {
-
+            txtId.Focus();
         }
 
         private void label1_Click(object sender, EventArgs e)

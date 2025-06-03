@@ -88,7 +88,7 @@ namespace Pahuljice1.Repositories
 
         public static void AddKid(Kid kid)
         {
-            string sql = @"INSERT INTO Kids (Id, [Ime i prezime], [Datum rođenja], [Roditelj(i)], [Kontakt], [Alergije], [Poteškoće], [Skupina], [Zaposlenik])
+            string sql = @"INSERT INTO Kids ([Id], [Ime i prezime], [Datum rođenja], [Roditelj(i)], [Kontakt], [Alergije], [Poteškoće], [Skupina], [Zaposlenik])
                    VALUES (@Id, @Name, @Date, @Parent, @Contact, @Allergy, @Setback, @Group, @Employee)";
 
             DB.OpenConnection();

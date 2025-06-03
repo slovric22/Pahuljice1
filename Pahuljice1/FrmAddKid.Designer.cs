@@ -54,7 +54,7 @@
             this.txtName.Location = new System.Drawing.Point(134, 81);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(272, 20);
-            this.txtName.TabIndex = 0;
+            this.txtName.TabIndex = 1;
             // 
             // lblName
             // 
@@ -202,7 +202,7 @@
             this.txtId.Location = new System.Drawing.Point(134, 47);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(270, 20);
-            this.txtId.TabIndex = 17;
+            this.txtId.TabIndex = 0;
             // 
             // lblId
             // 
@@ -210,9 +210,9 @@
             this.lblId.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblId.Location = new System.Drawing.Point(60, 47);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(21, 13);
+            this.lblId.Size = new System.Drawing.Size(28, 13);
             this.lblId.TabIndex = 18;
-            this.lblId.Text = "ID:";
+            this.lblId.Text = "OIB:";
             // 
             // FrmAddKid
             // 
