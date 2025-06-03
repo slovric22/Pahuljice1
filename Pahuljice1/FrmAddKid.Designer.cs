@@ -240,7 +240,10 @@
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtName);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmAddKid";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddKid";
             this.Load += new System.EventHandler(this.FrmAddKid_Load);
             this.ResumeLayout(false);

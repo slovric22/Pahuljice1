@@ -41,14 +41,14 @@
             this.DGVKids.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVKids.Location = new System.Drawing.Point(12, 12);
             this.DGVKids.Name = "DGVKids";
-            this.DGVKids.Size = new System.Drawing.Size(776, 346);
+            this.DGVKids.Size = new System.Drawing.Size(946, 346);
             this.DGVKids.TabIndex = 0;
             this.DGVKids.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVKids_CellContentClick);
             // 
             // BtnAdd
             // 
             this.BtnAdd.BackColor = System.Drawing.Color.Aquamarine;
-            this.BtnAdd.Location = new System.Drawing.Point(584, 387);
+            this.BtnAdd.Location = new System.Drawing.Point(754, 386);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(93, 47);
             this.BtnAdd.TabIndex = 1;
@@ -59,7 +59,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.IndianRed;
-            this.btnDelete.Location = new System.Drawing.Point(485, 387);
+            this.btnDelete.Location = new System.Drawing.Point(655, 386);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(93, 47);
             this.btnDelete.TabIndex = 2;
@@ -70,7 +70,7 @@
             // btnSaveChanges
             // 
             this.btnSaveChanges.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnSaveChanges.Location = new System.Drawing.Point(683, 388);
+            this.btnSaveChanges.Location = new System.Drawing.Point(853, 387);
             this.btnSaveChanges.Name = "btnSaveChanges";
             this.btnSaveChanges.Size = new System.Drawing.Size(105, 46);
             this.btnSaveChanges.TabIndex = 3;
@@ -95,13 +95,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImage = global::Pahuljice1.Properties.Resources.Pislika2;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(970, 450);
             this.Controls.Add(this.btnEmployees);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.DGVKids);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmKids";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmKids";
             this.Load += new System.EventHandler(this.FrmKids_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVKids)).EndInit();
