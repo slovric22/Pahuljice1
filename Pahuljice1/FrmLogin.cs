@@ -13,7 +13,7 @@ namespace Pahuljice1
     public partial class FrmLogin : Form
     {
         string username = "ravnateljica";
-        string password = "test";
+        string password = "pahuljice1";
 
         public FrmLogin()
         {
