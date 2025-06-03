@@ -38,7 +38,16 @@ namespace Pahuljice1
             DGVKids.Columns["FirstName"].Visible = false;
             DGVKids.Columns["LastName"].Visible = false;
             DGVKids.Columns["FirstName"].Visible = false;
-            
+
+            DGVKids.Columns["Id"].HeaderText = "OIB";
+            DGVKids.Columns["Name"].HeaderText = "Ime i prezime";
+            DGVKids.Columns["Date"].HeaderText = "Datum rođenja";
+            DGVKids.Columns["Parent"].HeaderText = "Roditelj(i)";
+            DGVKids.Columns["Contact"].HeaderText = "Kontakt";
+            DGVKids.Columns["Allergy"].HeaderText = "Alergije";
+            DGVKids.Columns["Setback"].HeaderText = "Poteškoće";
+            DGVKids.Columns["Group"].HeaderText = "Skupina";
+            DGVKids.Columns["Employee"].HeaderText = "Zaposlenik";
 
         }
 
